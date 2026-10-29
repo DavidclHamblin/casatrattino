@@ -78,11 +78,13 @@ nav.scrolled .menu-toggle{color:var(--ink)}
 .feature .num{font-family:var(--serif);font-style:italic;color:var(--terracotta);font-size:18px}
 
 /* Gallery */
-.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:240px;gap:12px;margin-top:50px}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;grid-auto-flow:dense;gap:12px;margin-top:50px}
 .gallery .ph{cursor:zoom-in}
-.gallery .ph:nth-child(1){grid-column:span 2;grid-row:span 2}
-.gallery .ph:nth-child(4){grid-row:span 2}
-.gallery .ph:nth-child(6){grid-column:span 2}
+.gallery .big{grid-column:span 2;grid-row:span 2}
+.gallery .wide{grid-column:span 2}
+.gallery .tall{grid-row:span 2}
+.band{height:52vh;min-height:300px;padding:0}
+.band .ph{height:100%}
 .gallery .ph img{transition:transform .6s}
 .gallery .ph:hover img{transform:scale(1.04)}
 .lightbox{position:fixed;inset:0;background:rgba(20,15,10,.92);display:none;align-items:center;justify-content:center;z-index:100;padding:24px}
@@ -149,8 +151,8 @@ footer.site a{color:#e6d7bd}
   section{padding:80px 0}
   .intro,.loc-grid,.booking-grid{grid-template-columns:1fr;gap:44px}
   .feature-grid{grid-template-columns:1fr}
-  .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:170px}
-  .gallery .ph:nth-child(6){grid-column:span 2}
+  .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:160px}
+  .band{height:34vh}
   nav ul{display:none;position:absolute;top:76px;left:0;right:0;background:var(--paper);flex-direction:column;gap:0;padding:10px 24px 20px;box-shadow:0 8px 20px rgba(0,0,0,.08)}
   nav ul.open{display:flex}
   nav ul li{padding:12px 0;border-bottom:1px solid var(--line)}
@@ -197,9 +199,9 @@ footer.site a{color:#e6d7bd}
 <header class="hero" id="top">
   <div class="ph" data-label="Hero photo"><img src="images/hero.jpg" alt="Casa Trattino" onerror="this.remove()"></div>
   <div class="wrap">
-    <div class="eyebrow">[EDIT] Region, Italy</div>
+    <div class="eyebrow">Città della Pieve · Umbria</div>
     <h1>Casa Trattino</h1>
-    <p>[EDIT] A stone house among olive groves — slow mornings, long lunches, and evenings that run into the night.</p>
+    <p>A stone farmhouse in the Umbrian hills — a saltwater pool, a wood-fired pizza oven and eighty olive trees.</p>
     <div class="hero-actions">
       <a href="#stay" class="btn">Request a stay</a>
       <a href="#house" class="btn ghost">Discover the house</a>
@@ -212,16 +214,16 @@ footer.site a{color:#e6d7bd}
     <div class="reveal">
       <div class="eyebrow">The house<span class="dash"></span></div>
       <h2>A little pause<br>between places.</h2>
-      <p><em>Trattino</em> is the Italian word for the dash — the small mark that joins two things together. [EDIT] Our house is just that: a link between busy lives and the unhurried rhythm of Italian countryside.</p>
-      <p>[EDIT] Describe the house here — its history, the views, the terrace, the kitchen, what makes it special for your family and for your guests.</p>
+      <p><em>Trattino</em> is the Italian word for the dash — the small mark that joins two things together. Our house is just that: a link between busy lives and the unhurried rhythm of the Umbrian countryside.</p>
+      <p>Built on the site of an ancient Etruscan tomb, Casa Trattino sits in its own land just outside Città della Pieve, with olive groves and fruit trees to wander through and views across the hills. Inside, it's a family home: terracotta floors, beamed ceilings, a cosy living room with a stove, and five bedrooms — all air-conditioned. Outside, there's a saltwater pool, a covered terrace for long lunches and a proper Italian grill and pizza oven for the evenings.</p>
       <div class="facts">
-        <div><b>[4]</b><small>Bedrooms</small></div>
-        <div><b>[3]</b><small>Bathrooms</small></div>
-        <div><b>[8]</b><small>Guests</small></div>
-        <div><b>[1]</b><small>Pool</small></div>
+        <div><b>5</b><small>Bedrooms</small></div>
+        <div><b>3</b><small>Bathrooms</small></div>
+        <div><b>80</b><small>Olive trees</small></div>
+        <div><b>1</b><small>Pool</small></div>
       </div>
     </div>
-    <div class="ph reveal" data-label="House photo"><img src="images/house-1.jpg" alt="The house" onerror="this.remove()"></div>
+    <div class="ph reveal" data-label="House photo"><img src="images/intro.jpg" alt="Garden chairs in the late afternoon sun at Casa Trattino" onerror="this.remove()"></div>
   </div>
 </section>
 
@@ -230,12 +232,12 @@ footer.site a{color:#e6d7bd}
     <div class="eyebrow reveal">What you'll find<span class="dash"></span></div>
     <h2 class="reveal">Made for living slowly</h2>
     <div class="feature-grid reveal">
-      <div class="feature"><span class="num">i.</span><h3>[EDIT] The terrace</h3><p>Shaded pergola, long table for twelve, and views across the valley at sunset.</p></div>
-      <div class="feature"><span class="num">ii.</span><h3>[EDIT] The kitchen</h3><p>A real cook's kitchen with a wood-fired oven for pizza nights.</p></div>
-      <div class="feature"><span class="num">iii.</span><h3>[EDIT] The pool</h3><p>Saltwater pool set in the garden, with loungers and an outdoor shower.</p></div>
-      <div class="feature"><span class="num">iv.</span><h3>[EDIT] Bedrooms</h3><p>Four calm bedrooms with linen bedding, shutters and air-conditioning.</p></div>
-      <div class="feature"><span class="num">v.</span><h3>[EDIT] The garden</h3><p>Olive trees, lavender and a lawn where children can run all day.</p></div>
-      <div class="feature"><span class="num">vi.</span><h3>[EDIT] Practical</h3><p>Fast Wi-Fi, washing machine, private parking, cot and high chair available.</p></div>
+      <div class="feature"><span class="num">i.</span><h3>The pool</h3><p>A saltwater pool set in the lawn, with loungers and views to the hills. Luca comes every day to look after the pool and the grounds.</p></div>
+      <div class="feature"><span class="num">ii.</span><h3>Grill &amp; pizza oven</h3><p>An authentic Italian grill and wood-fired pizza oven beside the covered terrace — made for long dinners outside.</p></div>
+      <div class="feature"><span class="num">iii.</span><h3>Olives &amp; orchard</h3><p>Eighty olive trees that give us our own olive oil, fruit trees, and land to walk and explore — plus a play area for children.</p></div>
+      <div class="feature"><span class="num">iv.</span><h3>Five bedrooms</h3><p>Five bedrooms, all with air-conditioning, three bathrooms and an extra toilet.</p></div>
+      <div class="feature"><span class="num">v.</span><h3>Evenings in</h3><p>A projector with Apple TV and Sonos surround sound for film nights, and a wine cellar downstairs.</p></div>
+      <div class="feature"><span class="num">vi.</span><h3>Well connected</h3><p>Wi-Fi by cable and Starlink, solar panels, and a Tesla charger for electric cars.</p></div>
     </div>
   </div>
 </section>
@@ -245,33 +247,41 @@ footer.site a{color:#e6d7bd}
     <div class="eyebrow reveal">Gallery<span class="dash"></span></div>
     <h2 class="reveal">A look around</h2>
     <div class="gallery reveal" id="galleryGrid">
-      <div class="ph" data-label="Photo 1"><img src="images/gallery-1.jpg" alt="" onerror="this.remove()"></div>
-      <div class="ph" data-label="Photo 2"><img src="images/gallery-2.jpg" alt="" onerror="this.remove()"></div>
-      <div class="ph" data-label="Photo 3"><img src="images/gallery-3.jpg" alt="" onerror="this.remove()"></div>
-      <div class="ph" data-label="Photo 4"><img src="images/gallery-4.jpg" alt="" onerror="this.remove()"></div>
-      <div class="ph" data-label="Photo 5"><img src="images/gallery-5.jpg" alt="" onerror="this.remove()"></div>
-      <div class="ph" data-label="Photo 6"><img src="images/gallery-6.jpg" alt="" onerror="this.remove()"></div>
-      <div class="ph" data-label="Photo 7"><img src="images/gallery-7.jpg" alt="" onerror="this.remove()"></div>
+      <div class="ph big"><img loading="lazy" src="images/g01-house-roses.jpg" alt="The stone farmhouse with roses in front" onerror="this.remove()"></div>
+      <div class="ph wide"><img loading="lazy" src="images/g02-pool-house.jpg" alt="Saltwater pool beside the house" onerror="this.remove()"></div>
+      <div class="ph"><img loading="lazy" src="images/g03-pool-view.jpg" alt="Pool with views to the hills" onerror="this.remove()"></div>
+      <div class="ph"><img loading="lazy" src="images/g04-pizza-oven.jpg" alt="Pizza in the wood-fired oven" onerror="this.remove()"></div>
+      <div class="ph tall"><img loading="lazy" src="images/g11-sitting-room.jpg" alt="Sitting room with vaulted brick ceiling" onerror="this.remove()"></div>
+      <div class="ph wide"><img loading="lazy" src="images/g05-terrace-night.jpg" alt="Covered terrace at night with the pizza oven" onerror="this.remove()"></div>
+      <div class="ph wide"><img loading="lazy" src="images/g06-living-room.jpg" alt="Living room with stone wall and stove" onerror="this.remove()"></div>
+      <div class="ph"><img loading="lazy" src="images/g07-bedroom-green.jpg" alt="Double bedroom with beamed ceiling" onerror="this.remove()"></div>
+      <div class="ph"><img loading="lazy" src="images/g08-bedroom-yellow.jpg" alt="Double bedroom" onerror="this.remove()"></div>
+      <div class="ph tall"><img loading="lazy" src="images/g13-house-garden.jpg" alt="The house above the garden" onerror="this.remove()"></div>
+      <div class="ph"><img loading="lazy" src="images/g09-bedroom-art.jpg" alt="Bedroom with painting" onerror="this.remove()"></div>
+      <div class="ph"><img loading="lazy" src="images/g10-bedroom-twin.jpg" alt="Twin bedroom" onerror="this.remove()"></div>
+      <div class="ph wide"><img loading="lazy" src="images/g12-view-autumn.jpg" alt="Autumn view over the hills" onerror="this.remove()"></div>
+      <div class="ph wide"><img loading="lazy" src="images/g14-play-area.jpg" alt="Children's play area under the oak" onerror="this.remove()"></div>
     </div>
   </div>
+</section>
+
+<section class="band" aria-hidden="true">
+  <div class="ph"><img loading="lazy" src="images/sunflowers.jpg" alt="" onerror="this.remove()"></div>
 </section>
 
 <section class="location" id="location">
   <div class="wrap loc-grid">
     <div class="reveal">
       <div class="eyebrow">Location<span class="dash"></span></div>
-      <h2>[EDIT] Village, Region</h2>
-      <p>[EDIT] A few words about the area — the nearest village, markets, wineries, beaches or hill towns worth a day trip.</p>
+      <h2>Città della Pieve, Umbria</h2>
+      <p>On the border of Umbria and Tuscany, Città della Pieve is a red-brick hill town with wonderful restaurants. Days here are for exploring nearby hill towns like Monteleone d'Orvieto, or simply staying by the pool.</p>
       <ul class="distances">
-        <li><span>[EDIT] Village shops &amp; café</span><span>5 min drive</span></li>
-        <li><span>[EDIT] Nearest beach</span><span>25 min</span></li>
-        <li><span>[EDIT] Nearest town</span><span>30 min</span></li>
-        <li><span>[EDIT] Airport</span><span>1 hr 15</span></li>
+        <li><span>Rome</span><span>about 2 hours</span></li>
+        <li><span>Florence</span><span>about 2 hours</span></li>
       </ul>
     </div>
     <div class="reveal">
-      <!-- [EDIT] Replace "Italy" in the URL below with your village name, e.g. q=Montalcino,Italy -->
-      <iframe class="map" loading="lazy" src="https://maps.google.com/maps?q=Italy&z=6&output=embed" title="Map"></iframe>
+      <iframe class="map" loading="lazy" src="https://maps.google.com/maps?q=Citt%C3%A0+della+Pieve,Italy&z=9&output=embed" title="Map of Città della Pieve"></iframe>
     </div>
   </div>
 </section>
@@ -296,9 +306,8 @@ footer.site a{color:#e6d7bd}
       <h2>Come and stay with us</h2>
       <p>Choose your dates and tell us a little about your group. We'll come back to you personally — usually within a day — with availability and the price for your stay.</p>
       <ul>
-        <li>[EDIT] Minimum stay: 7 nights in July &amp; August</li>
-        <li>[EDIT] Saturday to Saturday in high season</li>
-        <li>[EDIT] Check-in from 4pm, check-out by 10am</li>
+        <li>Minimum stay: 4 nights</li>
+        <li>Luca looks after the pool and property every day</li>
         <li>No booking fees — book direct with the owners</li>
       </ul>
     </aside>
@@ -336,7 +345,7 @@ footer.site a{color:#e6d7bd}
 <footer class="site">
   <div class="wrap">
     <a href="#top" class="logo">Casa<span>—</span>Trattino</a>
-    <div>[EDIT] Village, Region, Italy · <a id="footerEmail" href="#"></a></div>
+    <div>Città della Pieve, Umbria, Italy · <a id="footerEmail" href="#"></a></div>
     <div>© <span id="year"></span> Casa Trattino</div>
   </div>
 </footer>
@@ -356,8 +365,8 @@ const SETTINGS = {
   // If left empty, the form opens the visitor's email app instead.
   web3formsKey: "",
 
-  maxGuests: 8,     // [EDIT] total sleeping capacity
-  minNights: 3      // [EDIT] minimum stay
+  maxGuests: 12,    // [EDIT] total sleeping capacity
+  minNights: 4      // minimum stay
 };
 
 /* REVIEWS — add, remove or edit entries. Newest first.
@@ -365,18 +374,25 @@ const SETTINGS = {
    If the list is empty, the reviews section hides itself. */
 const REVIEWS = [
   {
-    name: "Example Guest",
-    from: "City, Country",
-    date: "August 2026",
+    name: "Matt & Emily",
+    from: "",
+    date: "",
     rating: 5,
-    text: "Replace this with a real review from one of your guests. Copy this block to add more."
+    text: "We've been here several times with our 3 daughters. It's a fantastic home in such a beautiful part of Italy. We loved spending days by the pool or exploring the nearby towns. There are some great restaurants here!"
   },
   {
-    name: "Example Guest",
-    from: "City, Country",
-    date: "June 2026",
+    name: "Mike & Jane",
+    from: "",
+    date: "",
     rating: 5,
-    text: "A second placeholder review. Keep each one to a few sentences so the cards stay tidy."
+    text: "A wonderful home. Very clean and a more than fully equipped kitchen. It's been wonderfully thought out. The property is very well maintained."
+  },
+  {
+    name: "Dan & Nicole",
+    from: "",
+    date: "",
+    rating: 5,
+    text: "A great week with the kids. The pool and pizza oven made for lovely long days. The house is beautiful. The nearby towns of Città della Pieve and Monteleone have some great restaurants – visit Seven Cafes for the best food!"
   }
 ];
 
